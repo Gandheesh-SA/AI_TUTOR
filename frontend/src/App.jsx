@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import Form from "./pages/Form.jsx";
 import Chat from "./pages/Chat.jsx";
 import Quiz from "./pages/Quiz.jsx";
@@ -12,7 +12,7 @@ function ProtectedRoute({ children }) {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Form />} />
         <Route path="/chat" element={
@@ -25,6 +25,6 @@ export default function App() {
           <ProtectedRoute><Result /></ProtectedRoute>
         } />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
